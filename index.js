@@ -211,6 +211,21 @@ console.log(isPowerOfTwo(32))
 // console.log(isPowerOfTwo2(32))
 
 
+//adaug si a treia varianta cu multiplu de 2 si rezolvata ca arrow function 
+let ispowerOfTwo3 = (x) => {
+    let num = 2;
+    for (let i = 1; num <= x; i++) {
+        num *= 2
+        if (num === x) {
+            return true;
+        }
+    }
+    return false;
+}
+console.log(ispowerOfTwo3(16))
+console.log(ispowerOfTwo3(17))
+
+
 console.log("****************************************************")
 
 
@@ -224,7 +239,7 @@ cleanKitchen(washDishes, cleanFloor)
 // Functia washDishes(dishes[], washDish): parcurge array-ul de farfurii si apeleaza funcția washDish pe fiecare.
 function washDishes(dishes, washDish) {
   for (let i = 0; i < dishes.length; i++) {
-    washDish(i + 1)
+    washDish(dishes[i])
   }
 }
 
